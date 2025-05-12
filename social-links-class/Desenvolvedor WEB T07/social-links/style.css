@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variaveis */
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --Blue: hsl(228, 45%, 44%);
+    --White: #fff;
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+}
+
+body,
+.container,
+.profile-pic,
+.button-card {
+    display: flex;
+    flex-direction: column;
+    /* border: red solid; */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--Off-Black);
+    color: var(--White);
+    padding: 1.8rem 3rem;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--Dark-Grey);
+    padding: 1.4rem;
+    width: 18rem;
+    min-height: 27rem;
+    border-radius: 0.3rem;
+    margin: auto;
+}
+
+.profile-pic {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.profile-pic img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: var(--Green);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1.1rem;
+}
+
+.self-description {
+    font-size: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.link {
+    background-color: var(--Grey);
+    color: var(--White);
+    padding: 0.6rem 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.link:hover {
+    background-color: var(--Green);
+    color: var(--Off-Black);
+}
+
+.link:focus {
+    outline: 2px solid var(--Green);
+}
+
+.attribuition {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.attribuition a {
+    color: var(--Green);
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+    }
+
+    .self-description {
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+}

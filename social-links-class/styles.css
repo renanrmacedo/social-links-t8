@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variaveis */
+:root {
+    --Green: hsl(76, 94%, 57%);
+    --Blue: hsl(228, 45%, 44%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 0%);
+}
+
+;
+
+body,
+.container,
+.profile,
+button-card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+body {
+    background-color: var(--Off-Black);
+    color: (--White);
+    min-height: 100vh;
+    padding: 1.8rem 3rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: var(--Dark-Grey);
+    padding: 1.4rem;
+    width: 18rem;
+    min-height: 27rem;
+    border-radius: 0, 5rem;
+
+}
