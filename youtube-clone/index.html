@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Youtube Clone</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/YoutubeIcon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@faker-js/faker@latest/dist/faker.min.js"></script>
+  <script src="./scripts/gen-data.js" defer></script>
+  <script src="./scripts/category.js" defer></script>
+  <script src="./scripts/search.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="./assets/images/YoutubeLogo.png" alt="Youtube Logo">
+    <!-- <img class="logo" src="https://logosmarcas.net/wp-content/uploads/2020/04/YouTube-Emblema.jpg" alt="Youtube Logo"> -->
+    <!-- https://logosmarcas.net/imageup/YouTube/YouTube-Logo-PNG7.png -->
+    <input type="search" placeholder="Search..." class="search-bar" oninput="searchVideo(event)">
+  </header>
+
+  <div class="container">
+    <!-- Sidebar sem funcionalidade por hora -->
+    <!-- <aside class="sidebar">
+      <ul>
+        <li><i class="fas fa-home"></i><span>Home</span></li>
+        <li><i class="fas fa-fire"></i><span>Trending</span></li>
+        <li><i class="fas fa-tv"></i><span>Subscriptions</span></li>
+        <li><i class="fas fa-book"></i><span>Library</span></li>
+        <li><i class="fas fa-futbol"></i><span>Library</span></li>
+      </ul>
+    </aside> -->
+
+    <main>
+      <div class="category-filter">
+        <button class="category-btn" data-category="all">All</button>
+        <button class="category-btn" data-category="music"><i class="fas fa-music"></i> Music</button>
+        <button class="category-btn" data-category="sports"><i class="fas fa-futbol"></i> Sports</button>
+        <button class="category-btn" data-category="gaming"><i class="fas fa-gamepad"></i> Gaming</button>
+      </div>
+
+      <div class="video-grid" id="videos">
+        <div class="video-card sports">
+          <img src="./assets/images/ManualdoMundoChannel.jpg" alt="Video Thumbnail">
+          <h3>Como fumar 10 milhões de vapes</h3>
+          <p>Manual do Mundo</p>
+          <p>Sports</p>
+        </div>
+        <div class="video-card sports">
+          <img src="./assets/images/ManualdoMundoChannel.jpg" alt="Video Thumbnail">
+          <h3>Como fazer a retifica de motor AP 1.8</h3>
+          <p>Manual do Mundo</p>
+          <p>Sports</p>
+        </div>
+        <div class="video-card sports">
+          <img src="./assets/images/SaoPauloFutebolClube.jpg" alt="Video Thumbnail">
+          <h3>Porque o São Paulo Futebol Clube é tão gigante?</h3>
+          <p>Manual do Mundo</p>
+          <p>Sports</p>
+        </div>
+        <div class="video-card gaming">
+          <img src="./assets/images/FortuneTiger.jpg" alt="Video Thumbnail">
+          <h3>Horários bugados no Tigrinho</h3>
+          <p>Fortune Tiger</p>
+          <p>Gaming</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Coded by <a href="#">Thiago Mundici de Sant'anna</a>.
+    </footer>
+  </div>
+</body>
