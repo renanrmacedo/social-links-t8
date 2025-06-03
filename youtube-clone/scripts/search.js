@@ -1,18 +1,22 @@
 function searchVideo(event) {
-    const search = event.target.value;
-    const videos = document.getElementsByName("video-card");
+    const search = event.target.value.toLowerCase();
+    const videos = document.getElementsByClassName("video-card");
 
 
     for (const video of videos) {
-        const [channelNameElement, categoryElement  ] = video.
-        getElementsByTagName("p");
+        const [channelNameElement, categoryElement] = video.getElementsByTagName("p");
 
         const videoInfo = {
-            tittle: video.getElementsByTagName("h3")[0].innerText,
-            channelName: channelNameElement.innerText, 
-            category: categoryElement.innerText,
+            tittle: video.getElementsByTagName("h3")[0].innerText.toLowerCase(),
+            channelName: channelNameElement.innerText.toLowerCase(),
+            category: categoryElement.innerText.toLowerCase(),
         }
 
+        video.style.display = "revert";
+
+        if (!matches(videoInfo, search)) {
+            video.style.display = "none";
+        }
     }
 }
 
